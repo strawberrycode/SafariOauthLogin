@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		435CB25CD56D963A2CF4CB9F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC372EAC95CCFE13BFF8AB0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		ACDB20691B66447800528BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB20681B66447800528BF7 /* AppDelegate.swift */; };
+		ACDB206B1B66447800528BF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB206A1B66447800528BF7 /* ViewController.swift */; };
+		ACDB206E1B66447800528BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDB206C1B66447800528BF7 /* Main.storyboard */; };
+		ACDB20701B66447800528BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDB206F1B66447800528BF7 /* Assets.xcassets */; };
+		ACDB20731B66447800528BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDB20711B66447800528BF7 /* LaunchScreen.storyboard */; };
+		ACDB207E1B66447800528BF7 /* SafariOauthLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB207D1B66447800528BF7 /* SafariOauthLoginTests.swift */; };
+		ACDB20891B66447800528BF7 /* SafariOauthLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB20881B66447800528BF7 /* SafariOauthLoginUITests.swift */; };
+		ACDB20971B66462600528BF7 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB20961B66462600528BF7 /* Auth.swift */; };
+		ACDB20991B666F9400528BF7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB20981B666F9400528BF7 /* User.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACDB207A1B66447800528BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACDB205D1B66447800528BF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACDB20641B66447800528BF7;
+			remoteInfo = SafariOauthLogin;
+		};
+		ACDB20851B66447800528BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACDB205D1B66447800528BF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACDB20641B66447800528BF7;
+			remoteInfo = SafariOauthLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DC372EAC95CCFE13BFF8AB0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		306285A6C412FAFBF5299178 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		386C6A4232355351339F2024 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		ACDB20651B66447800528BF7 /* SafariOauthLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafariOauthLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACDB20681B66447800528BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACDB206A1B66447800528BF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACDB206D1B66447800528BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ACDB206F1B66447800528BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACDB20721B66447800528BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ACDB20741B66447800528BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACDB20791B66447800528BF7 /* SafariOauthLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafariOauthLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACDB207D1B66447800528BF7 /* SafariOauthLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariOauthLoginTests.swift; sourceTree = "<group>"; };
+		ACDB207F1B66447800528BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACDB20841B66447800528BF7 /* SafariOauthLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafariOauthLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACDB20881B66447800528BF7 /* SafariOauthLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariOauthLoginUITests.swift; sourceTree = "<group>"; };
+		ACDB208A1B66447800528BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACDB20961B66462600528BF7 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		ACDB20981B666F9400528BF7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACDB20621B66447800528BF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435CB25CD56D963A2CF4CB9F /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACDB20761B66447800528BF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACDB20811B66447800528BF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52DF6ADAC123054C23ECAB11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				386C6A4232355351339F2024 /* Pods.debug.xcconfig */,
+				306285A6C412FAFBF5299178 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ACDB205C1B66447800528BF7 = {
+			isa = PBXGroup;
+			children = (
+				ACDB20671B66447800528BF7 /* SafariOauthLogin */,
+				ACDB207C1B66447800528BF7 /* SafariOauthLoginTests */,
+				ACDB20871B66447800528BF7 /* SafariOauthLoginUITests */,
+				ACDB20661B66447800528BF7 /* Products */,
+				52DF6ADAC123054C23ECAB11 /* Pods */,
+				C7A1BA31CDB2C8E731A6D5A9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ACDB20661B66447800528BF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACDB20651B66447800528BF7 /* SafariOauthLogin.app */,
+				ACDB20791B66447800528BF7 /* SafariOauthLoginTests.xctest */,
+				ACDB20841B66447800528BF7 /* SafariOauthLoginUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACDB20671B66447800528BF7 /* SafariOauthLogin */ = {
+			isa = PBXGroup;
+			children = (
+				ACDB20681B66447800528BF7 /* AppDelegate.swift */,
+				ACDB206A1B66447800528BF7 /* ViewController.swift */,
+				ACDB206C1B66447800528BF7 /* Main.storyboard */,
+				ACDB206F1B66447800528BF7 /* Assets.xcassets */,
+				ACDB20711B66447800528BF7 /* LaunchScreen.storyboard */,
+				ACDB20741B66447800528BF7 /* Info.plist */,
+				ACDB20961B66462600528BF7 /* Auth.swift */,
+				ACDB20981B666F9400528BF7 /* User.swift */,
+			);
+			path = SafariOauthLogin;
+			sourceTree = "<group>";
+		};
+		ACDB207C1B66447800528BF7 /* SafariOauthLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACDB207D1B66447800528BF7 /* SafariOauthLoginTests.swift */,
+				ACDB207F1B66447800528BF7 /* Info.plist */,
+			);
+			path = SafariOauthLoginTests;
+			sourceTree = "<group>";
+		};
+		ACDB20871B66447800528BF7 /* SafariOauthLoginUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ACDB20881B66447800528BF7 /* SafariOauthLoginUITests.swift */,
+				ACDB208A1B66447800528BF7 /* Info.plist */,
+			);
+			path = SafariOauthLoginUITests;
+			sourceTree = "<group>";
+		};
+		C7A1BA31CDB2C8E731A6D5A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DC372EAC95CCFE13BFF8AB0 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACDB20641B66447800528BF7 /* SafariOauthLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACDB208D1B66447800528BF7 /* Build configuration list for PBXNativeTarget "SafariOauthLogin" */;
+			buildPhases = (
+				BBCD06D99BEFDC224F33C6E1 /* Check Pods Manifest.lock */,
+				ACDB20611B66447800528BF7 /* Sources */,
+				ACDB20621B66447800528BF7 /* Frameworks */,
+				ACDB20631B66447800528BF7 /* Resources */,
+				A259D9C56977DB8E3CB93BEB /* Embed Pods Frameworks */,
+				9C120FE6A014BD235374E793 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SafariOauthLogin;
+			productName = SafariOauthLogin;
+			productReference = ACDB20651B66447800528BF7 /* SafariOauthLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACDB20781B66447800528BF7 /* SafariOauthLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACDB20901B66447800528BF7 /* Build configuration list for PBXNativeTarget "SafariOauthLoginTests" */;
+			buildPhases = (
+				ACDB20751B66447800528BF7 /* Sources */,
+				ACDB20761B66447800528BF7 /* Frameworks */,
+				ACDB20771B66447800528BF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACDB207B1B66447800528BF7 /* PBXTargetDependency */,
+			);
+			name = SafariOauthLoginTests;
+			productName = SafariOauthLoginTests;
+			productReference = ACDB20791B66447800528BF7 /* SafariOauthLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ACDB20831B66447800528BF7 /* SafariOauthLoginUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACDB20931B66447800528BF7 /* Build configuration list for PBXNativeTarget "SafariOauthLoginUITests" */;
+			buildPhases = (
+				ACDB20801B66447800528BF7 /* Sources */,
+				ACDB20811B66447800528BF7 /* Frameworks */,
+				ACDB20821B66447800528BF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACDB20861B66447800528BF7 /* PBXTargetDependency */,
+			);
+			name = SafariOauthLoginUITests;
+			productName = SafariOauthLoginUITests;
+			productReference = ACDB20841B66447800528BF7 /* SafariOauthLoginUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACDB205D1B66447800528BF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = StrawberryCode;
+				TargetAttributes = {
+					ACDB20641B66447800528BF7 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					ACDB20781B66447800528BF7 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = ACDB20641B66447800528BF7;
+					};
+					ACDB20831B66447800528BF7 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = ACDB20641B66447800528BF7;
+					};
+				};
+			};
+			buildConfigurationList = ACDB20601B66447800528BF7 /* Build configuration list for PBXProject "SafariOauthLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACDB205C1B66447800528BF7;
+			productRefGroup = ACDB20661B66447800528BF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACDB20641B66447800528BF7 /* SafariOauthLogin */,
+				ACDB20781B66447800528BF7 /* SafariOauthLoginTests */,
+				ACDB20831B66447800528BF7 /* SafariOauthLoginUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACDB20631B66447800528BF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACDB20731B66447800528BF7 /* LaunchScreen.storyboard in Resources */,
+				ACDB20701B66447800528BF7 /* Assets.xcassets in Resources */,
+				ACDB206E1B66447800528BF7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACDB20771B66447800528BF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACDB20821B66447800528BF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C120FE6A014BD235374E793 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A259D9C56977DB8E3CB93BEB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBCD06D99BEFDC224F33C6E1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACDB20611B66447800528BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACDB20991B666F9400528BF7 /* User.swift in Sources */,
+				ACDB206B1B66447800528BF7 /* ViewController.swift in Sources */,
+				ACDB20691B66447800528BF7 /* AppDelegate.swift in Sources */,
+				ACDB20971B66462600528BF7 /* Auth.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACDB20751B66447800528BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACDB207E1B66447800528BF7 /* SafariOauthLoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACDB20801B66447800528BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACDB20891B66447800528BF7 /* SafariOauthLoginUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACDB207B1B66447800528BF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACDB20641B66447800528BF7 /* SafariOauthLogin */;
+			targetProxy = ACDB207A1B66447800528BF7 /* PBXContainerItemProxy */;
+		};
+		ACDB20861B66447800528BF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACDB20641B66447800528BF7 /* SafariOauthLogin */;
+			targetProxy = ACDB20851B66447800528BF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACDB206C1B66447800528BF7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACDB206D1B66447800528BF7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ACDB20711B66447800528BF7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACDB20721B66447800528BF7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACDB208B1B66447800528BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACDB208C1B66447800528BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACDB208E1B66447800528BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 386C6A4232355351339F2024 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SafariOauthLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strawberrycode.SafariOauthLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ACDB208F1B66447800528BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 306285A6C412FAFBF5299178 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SafariOauthLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strawberrycode.SafariOauthLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ACDB20911B66447800528BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SafariOauthLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strawberrycode.SafariOauthLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SafariOauthLogin.app/SafariOauthLogin";
+			};
+			name = Debug;
+		};
+		ACDB20921B66447800528BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SafariOauthLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strawberrycode.SafariOauthLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SafariOauthLogin.app/SafariOauthLogin";
+			};
+			name = Release;
+		};
+		ACDB20941B66447800528BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SafariOauthLoginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strawberrycode.SafariOauthLoginUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SafariOauthLogin;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		ACDB20951B66447800528BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SafariOauthLoginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strawberrycode.SafariOauthLoginUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SafariOauthLogin;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACDB20601B66447800528BF7 /* Build configuration list for PBXProject "SafariOauthLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACDB208B1B66447800528BF7 /* Debug */,
+				ACDB208C1B66447800528BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACDB208D1B66447800528BF7 /* Build configuration list for PBXNativeTarget "SafariOauthLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACDB208E1B66447800528BF7 /* Debug */,
+				ACDB208F1B66447800528BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACDB20901B66447800528BF7 /* Build configuration list for PBXNativeTarget "SafariOauthLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACDB20911B66447800528BF7 /* Debug */,
+				ACDB20921B66447800528BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACDB20931B66447800528BF7 /* Build configuration list for PBXNativeTarget "SafariOauthLoginUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACDB20941B66447800528BF7 /* Debug */,
+				ACDB20951B66447800528BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACDB205D1B66447800528BF7 /* Project object */;
+}
