@@ -32,7 +32,7 @@ min: iOS 9 - Xcode 7 beta 4
 
 ## More about this project
 
-_Coming soon_
+Read the article: [SFSafariViewController and OAuth – the Instagram example](http://bit.ly/1IrHe8q)
 
 ## That's all folks!
 
