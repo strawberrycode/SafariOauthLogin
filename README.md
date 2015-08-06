@@ -1,5 +1,5 @@
 # SafariOauthLogin
-SFSafariViewController and OAuth: a simple login example with Instagram
+SFSafariViewController and OAuth: a simple login example with Instagram on iOS, written in Swift 2
 
 ## The 3-steps install
 
@@ -26,6 +26,9 @@ And add your redirect URI to `info.plist`
 ```
 3. If you haven't got Cocoapods installed, check here to know what to do: https://guides.cocoapods.org/using/getting-started.html
   then ```$ pod install```
+
+## Compatibility
+min: iOS 9 - Xcode 7 beta 4
 
 ## More about this project
 
