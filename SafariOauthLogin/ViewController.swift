@@ -65,12 +65,14 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     func loginWithInstagram(code: String) {
         let request = AuthInstagram.Router.requestAccessTokenURLStringAndParms(code)
         
-        Alamofire.request(.POST, request.URLString, parameters: request.Params)
-            .responseJSON {
-                (request, response, jsonObject, error) in
+        Alamofire.request(.POST, request.URLString, parameters: request.Params).responseJSON { response in
+            if response.result.isSuccess {
                 
-                print("request: \(request)")
-                print("response: \(response)")
+                let data = response.result.value
+                let error = response.result.error
+
+                
+                print("request: \(response.request)")
                 
                 if let unwrappedError = error {
                     
@@ -83,7 +85,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                 } else {
 //                    print("-- jsonObject \(jsonObject!)")
                     
-                    let json = JSON(jsonObject!)
+                    let json = JSON(data!)
 
                     // The object should be formatted that way:
 //                    "access_token" : "",
@@ -112,6 +114,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                         }
                     })
                 }
+            }
         }
     }
     
