@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		435CB25CD56D963A2CF4CB9F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC372EAC95CCFE13BFF8AB0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		ACDB20691B66447800528BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB20681B66447800528BF7 /* AppDelegate.swift */; };
 		ACDB206B1B66447800528BF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB206A1B66447800528BF7 /* ViewController.swift */; };
 		ACDB206E1B66447800528BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDB206C1B66447800528BF7 /* Main.storyboard */; };
@@ -17,6 +16,7 @@
 		ACDB20891B66447800528BF7 /* SafariOauthLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB20881B66447800528BF7 /* SafariOauthLoginUITests.swift */; };
 		ACDB20971B66462600528BF7 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB20961B66462600528BF7 /* Auth.swift */; };
 		ACDB20991B666F9400528BF7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB20981B666F9400528BF7 /* User.swift */; };
+		FE44E2DF0A000241FD2121C7 /* Pods_StrawberryCode_SafariOauthLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E38B29A3AE3F6341B4CE20 /* Pods_StrawberryCode_SafariOauthLogin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0063993C3AC7DEA81015148A /* Pods-StrawberryCode-SafariOauthLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrawberryCode-SafariOauthLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StrawberryCode-SafariOauthLogin/Pods-StrawberryCode-SafariOauthLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		23E38B29A3AE3F6341B4CE20 /* Pods_StrawberryCode_SafariOauthLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrawberryCode_SafariOauthLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC372EAC95CCFE13BFF8AB0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		306285A6C412FAFBF5299178 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		386C6A4232355351339F2024 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ACDB20651B66447800528BF7 /* SafariOauthLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafariOauthLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDB20681B66447800528BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACDB206A1B66447800528BF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +55,7 @@
 		ACDB208A1B66447800528BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACDB20961B66462600528BF7 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		ACDB20981B666F9400528BF7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BF3645F14A756E771B400143 /* Pods-StrawberryCode-SafariOauthLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrawberryCode-SafariOauthLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrawberryCode-SafariOauthLogin/Pods-StrawberryCode-SafariOauthLogin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				435CB25CD56D963A2CF4CB9F /* Pods.framework in Frameworks */,
+				FE44E2DF0A000241FD2121C7 /* Pods_StrawberryCode_SafariOauthLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,11 +84,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52DF6ADAC123054C23ECAB11 /* Pods */ = {
+		76A39810D35D006DB7203B67 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				386C6A4232355351339F2024 /* Pods.debug.xcconfig */,
-				306285A6C412FAFBF5299178 /* Pods.release.xcconfig */,
+				0063993C3AC7DEA81015148A /* Pods-StrawberryCode-SafariOauthLogin.debug.xcconfig */,
+				BF3645F14A756E771B400143 /* Pods-StrawberryCode-SafariOauthLogin.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -99,8 +100,8 @@
 				ACDB207C1B66447800528BF7 /* SafariOauthLoginTests */,
 				ACDB20871B66447800528BF7 /* SafariOauthLoginUITests */,
 				ACDB20661B66447800528BF7 /* Products */,
-				52DF6ADAC123054C23ECAB11 /* Pods */,
 				C7A1BA31CDB2C8E731A6D5A9 /* Frameworks */,
+				76A39810D35D006DB7203B67 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				2DC372EAC95CCFE13BFF8AB0 /* Pods.framework */,
+				23E38B29A3AE3F6341B4CE20 /* Pods_StrawberryCode_SafariOauthLogin.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,12 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACDB208D1B66447800528BF7 /* Build configuration list for PBXNativeTarget "SafariOauthLogin" */;
 			buildPhases = (
-				BBCD06D99BEFDC224F33C6E1 /* Check Pods Manifest.lock */,
+				D6DB5D0BCAE3FA344C2F96F8 /* 📦 Check Pods Manifest.lock */,
 				ACDB20611B66447800528BF7 /* Sources */,
 				ACDB20621B66447800528BF7 /* Frameworks */,
 				ACDB20631B66447800528BF7 /* Resources */,
-				A259D9C56977DB8E3CB93BEB /* Embed Pods Frameworks */,
-				9C120FE6A014BD235374E793 /* Copy Pods Resources */,
+				02180360D730AB24EA215E1E /* 📦 Embed Pods Frameworks */,
+				D4023C154AD501BA91A0D801 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,44 +286,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9C120FE6A014BD235374E793 /* Copy Pods Resources */ = {
+		02180360D730AB24EA215E1E /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StrawberryCode-SafariOauthLogin/Pods-StrawberryCode-SafariOauthLogin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A259D9C56977DB8E3CB93BEB /* Embed Pods Frameworks */ = {
+		D4023C154AD501BA91A0D801 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StrawberryCode-SafariOauthLogin/Pods-StrawberryCode-SafariOauthLogin-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BBCD06D99BEFDC224F33C6E1 /* Check Pods Manifest.lock */ = {
+		D6DB5D0BCAE3FA344C2F96F8 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +481,7 @@
 		};
 		ACDB208E1B66447800528BF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 386C6A4232355351339F2024 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 0063993C3AC7DEA81015148A /* Pods-StrawberryCode-SafariOauthLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SafariOauthLogin/Info.plist;
@@ -491,7 +493,7 @@
 		};
 		ACDB208F1B66447800528BF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 306285A6C412FAFBF5299178 /* Pods.release.xcconfig */;
+			baseConfigurationReference = BF3645F14A756E771B400143 /* Pods-StrawberryCode-SafariOauthLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SafariOauthLogin/Info.plist;

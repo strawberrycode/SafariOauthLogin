@@ -20,7 +20,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
 
     @IBOutlet var loginInstagramButton: UIButton!
     @IBOutlet var label: UILabel!
-    @IBOutlet var logText: UITextView!
+    @IBOutlet var logText: UILabel!
 
 
     var safariVC: SFSafariViewController?
@@ -30,12 +30,12 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        loginInstagramButton.setTitle(NSLocalizedString("Login with Instagram!", comment: ""), forState: UIControlState.Normal)
-        logText.text = ""
+        loginInstagramButton.setTitle(NSLocalizedString("Log in with Instagram!", comment: ""), forState: UIControlState.Normal)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "safariLogin:", name: kSafariViewControllerCloseNotification, object: nil)
+        logText.hidden = true
+        label.hidden = true
         
-        self.label.text = ""
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.safariLogin(_:)), name: kSafariViewControllerCloseNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,7 +54,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     func safariLogin(notification: NSNotification) {
         let notifUrl = notification.object as! NSURL
-        print("notifUrl: \(notifUrl)")
+        print("\nnotifUrl: \(notifUrl)")
         let urlString = String(notifUrl)
         let code = extractCode(urlString)
         print("code: \(code)")
@@ -70,9 +70,8 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                 
                 let data = response.result.value
                 let error = response.result.error
-
-                
-                print("request: \(response.request)")
+   
+                print("\nrequest: \(response.request)")
                 
                 if let unwrappedError = error {
                     
@@ -83,10 +82,8 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                     })
                     
                 } else {
-//                    print("-- jsonObject \(jsonObject!)")
+//                    print("-- data \(data!)")
                     
-                    let json = JSON(data!)
-
                     // The object should be formatted that way:
 //                    "access_token" : "",
 //                    "user" : {
@@ -99,19 +96,24 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                     
 //                    print("-- Instagram json: \(json)")
                     
-                    if json != nil {
-                        self.user = User(json: json)
-                    }
+                    let json = JSON(data!)
+                    print("json: \(json)")
+                    self.user = User(json: json)
                     
                     self.safariVC?.dismissViewControllerAnimated(true, completion: { () -> Void in
                         
-                        if self.user != nil {
-                            self.label.text = String.localizedStringWithFormat(NSLocalizedString("Welcome %@, you are logged in with the Instagram user: %@", comment: ""), self.user!.firstName, self.user!.userName)
+                        if let user = self.user {
+                            self.label.text = String.localizedStringWithFormat(NSLocalizedString("Welcome %@, you are logged in with the Instagram user: %@", comment: ""), user.firstName, user.userName)
                             self.logText.text = String(json)
-
+                            
+                            self.label.hidden = false
+                            self.logText.hidden = false
+                            
                         } else {
                             self.label.text = NSLocalizedString("Sorry you are not logged in, try again.", comment: "")
+                            self.label.hidden = false
                         }
+                        self.view.invalidateIntrinsicContentSize()
                     })
                 }
             }
@@ -146,6 +148,5 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         }
         return code
     }
-    
     
 }

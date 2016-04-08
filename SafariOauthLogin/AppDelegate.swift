@@ -43,6 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SFSafariViewControllerDel
     }
 
 
+/*
+    // DEPRECATED in iOS9
+     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         
         // just making sure we send the notification when the URL is opened in SFSafariViewController
@@ -50,6 +53,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SFSafariViewControllerDel
             NSNotificationCenter.defaultCenter().postNotificationName(kSafariViewControllerCloseNotification, object: url)
             return true
         }
+        return true
+    }
+*/
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        
+//        print("app: \(app)")
+//        print("url: \(url)")
+//        print("options: \(options)")
+        
+        if let sourceApplication = options["UIApplicationOpenURLOptionsSourceApplicationKey"] {
+            
+            if (String(sourceApplication) == "com.apple.SafariViewService") {
+                NSNotificationCenter.defaultCenter().postNotificationName(kSafariViewControllerCloseNotification, object: url)
+                return true
+            }
+        }
+        
         return true
     }
     

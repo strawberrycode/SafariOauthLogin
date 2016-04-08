@@ -1,6 +1,16 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '9.3'
 use_frameworks!
 
-pod 'Alamofire'
-pod 'SwiftyJSON'
+inhibit_all_warnings!
+
+abstract_target 'StrawberryCode' do
+
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
+
+    target 'SafariOauthLogin' do
+        # exclusive to 'SafariOauthLogin'
+    end
+
+end
