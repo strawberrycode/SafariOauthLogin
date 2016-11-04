@@ -30,12 +30,12 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        loginInstagramButton.setTitle(NSLocalizedString("Log in with Instagram!", comment: ""), forState: UIControlState.Normal)
+        loginInstagramButton.setTitle(NSLocalizedString("Log in with Instagram!", comment: ""), for: UIControlState())
         
-        logText.hidden = true
-        label.hidden = true
+        logText.isHidden = true
+        label.isHidden = true
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.safariLogin(_:)), name: kSafariViewControllerCloseNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.safariLogin(_:)), name: NSNotification.Name(rawValue: kSafariViewControllerCloseNotification), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,46 +44,50 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
 
 
-    @IBAction func loginInstagramButtonTapped(sender: UIButton) {
+    @IBAction func loginInstagramButtonTapped(_ sender: UIButton) {
         print(AuthInstagram.Router.authorizationURL)
-        safariVC = SFSafariViewController(URL: AuthInstagram.Router.authorizationURL)
+        safariVC = SFSafariViewController(url: AuthInstagram.Router.authorizationURL as URL)
         safariVC!.delegate = self
-        self.presentViewController(safariVC!, animated: true, completion: nil)
+        self.present(safariVC!, animated: true, completion: nil)
     }
     
     
-    func safariLogin(notification: NSNotification) {
-        let notifUrl = notification.object as! NSURL
+    func safariLogin(_ notification: Notification) {
+        let notifUrl = notification.object as! URL
         print("\nnotifUrl: \(notifUrl)")
-        let urlString = String(notifUrl)
+        let urlString = String(describing: notifUrl)
         let code = extractCode(urlString)
         print("code: \(code)")
         self.loginWithInstagram(code!)
     }
 
     
-    func loginWithInstagram(code: String) {
+    func loginWithInstagram(_ code: String) {
         let request = AuthInstagram.Router.requestAccessTokenURLStringAndParms(code)
         
-        Alamofire.request(.POST, request.URLString, parameters: request.Params).responseJSON { response in
-            if response.result.isSuccess {
+        Alamofire.request(request.URLString, method: .post, parameters: request.Params, encoding: JSONEncoding.default).responseJSON { response in
+            
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
                 
                 let data = response.result.value
                 let error = response.result.error
-   
+
                 print("\nrequest: \(response.request)")
-                
+
                 if let unwrappedError = error {
-                    
+
                     print("error: \(unwrappedError.localizedDescription)")
-                    
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        self.safariVC!.dismissViewControllerAnimated(true, completion: nil)
-                    })
-                    
+
+                    DispatchQueue.main.async {
+                        self.safariVC!.dismiss(animated: true, completion: nil)
+                    }
+
                 } else {
 //                    print("-- data \(data!)")
-                    
+
                     // The object should be formatted that way:
 //                    "access_token" : "",
 //                    "user" : {
@@ -93,29 +97,32 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
 //                        "id" : "",
 //                        "full_name" : "",
 //                        "bio" : ""
-                    
+
 //                    print("-- Instagram json: \(json)")
-                    
+
                     let json = JSON(data!)
                     print("json: \(json)")
                     self.user = User(json: json)
-                    
-                    self.safariVC?.dismissViewControllerAnimated(true, completion: { () -> Void in
-                        
+
+                    self.safariVC?.dismiss(animated: true, completion: { () -> Void in
+
                         if let user = self.user {
                             self.label.text = String.localizedStringWithFormat(NSLocalizedString("Welcome %@, you are logged in with the Instagram user: %@", comment: ""), user.firstName, user.userName)
-                            self.logText.text = String(json)
+                            self.logText.text = String(describing: json)
                             
-                            self.label.hidden = false
-                            self.logText.hidden = false
+                            self.label.isHidden = false
+                            self.logText.isHidden = false
                             
                         } else {
                             self.label.text = NSLocalizedString("Sorry you are not logged in, try again.", comment: "")
-                            self.label.hidden = false
+                            self.label.isHidden = false
                         }
                         self.view.invalidateIntrinsicContentSize()
                     })
                 }
+                
+            case .failure(let error):
+                print(error)
             }
         }
     }
@@ -123,27 +130,27 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     // MARK: - SFSafariViewControllerDelegate
     
-    func safariViewControllerDidFinish(controller: SFSafariViewController) {
-        controller.dismissViewControllerAnimated(true) { () -> Void in
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true) { () -> Void in
             self.label.text = NSLocalizedString("You just dismissed the login view.", comment: "")
         }
     }
     
-    func safariViewController(controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
+    func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
         print("didLoadSuccessfully: \(didLoadSuccessfully)")
     }
     
     
     // MARK: - Utils
     
-    func extractCode(urlString: String) -> String? {
+    func extractCode(_ urlString: String) -> String? {
         var code: String? = nil
-        let url = NSURL(string: urlString)
+        let url = URL(string: urlString)
         let urlQuery = (url?.query != nil) ? url?.query : urlString
-        let components = urlQuery?.componentsSeparatedByString("&")
+        let components = urlQuery?.components(separatedBy: "&")
         for comp in components! {
-            if (comp.rangeOfString("code=") != nil) {
-                code = comp.componentsSeparatedByString("=").last
+            if (comp.range(of: "code=") != nil) {
+                code = comp.components(separatedBy: "=").last
             }
         }
         return code

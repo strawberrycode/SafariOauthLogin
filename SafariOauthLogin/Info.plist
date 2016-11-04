@@ -27,7 +27,7 @@
 			<string>com.strawberrycode.SafariOauthLogin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string></string>
+				<string>SafariOauthLogin</string>
 			</array>
 		</dict>
 	</array>

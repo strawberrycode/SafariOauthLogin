@@ -8,7 +8,7 @@ SFSafariViewController and OAuth: a simple login example with Instagram on iOS, 
 ```
 let INSTAGRAM_CLIENT_ID = ""
 let INSTAGRAM_CLIENT_SECRET = ""
-let INSTAGRAM_REDIRECT_URL = ""
+let INSTAGRAM_REDIRECT_URL = ""  // example: SafariOauthLogin:// or http://strawberrycode.com
 ```
 And add your redirect URI to `info.plist`
 ```
@@ -19,13 +19,17 @@ And add your redirect URI to `info.plist`
         <string>com.strawberrycode.SafariOauthLogin</string>
         <key>CFBundleURLSchemes</key>
         <array>
-            <string>PLACE_URI_HERE</string>
+            <string>PLACE_APP_NAME_HERE</string> // example: SafariOauthLogin
         </array>
     </dict>
 </array>
-```
+``` `
 3. If you haven't got Cocoapods installed, check here to know what to do: https://guides.cocoapods.org/using/getting-started.html
   then ```$ pod install```
+
+###Note:###
+`INSTAGRAM_REDIRECT_URL` is one of the URIs you put in the field `Valid redirect URIs` in the Instagram Developer Portal when you create a new Client ID. It can be a website URL or an app scheme like `SafariOauthLogin://`. 
+If you want the login to redirect to your app, then put the app scheme there. 
 
 ## Compatibility
 min: iOS 9 - Xcode 7 beta 4

@@ -19,14 +19,14 @@ class User {
     
     init(json: JSON) {
         
-        if let accessToken = json["access_token"].string, userID = json["user"]["id"].string {
+        if let accessToken = json["access_token"].string, let userID = json["user"]["id"].string {
             
             self.instagramAccessToken = accessToken
             self.instagramId = userID
             
             let instagramUser = json["user"]
             let fullName = instagramUser["full_name"].stringValue
-            var names = fullName.componentsSeparatedByString(" ")
+            var names = fullName.components(separatedBy: " ")
             
             if (names.count > 0) {
                 self.firstName = names[0]

@@ -32,14 +32,14 @@ class SafariOauthLoginUITests: XCTestCase {
 
         // if the user is already logged in on Safari
         
-        XCUIDevice.sharedDevice().orientation = .Portrait
+        XCUIDevice.shared().orientation = .portrait
         let app = XCUIApplication()
         app.buttons["Login with Instagram"].tap()
         
         let label: XCUIElement = app.staticTexts["Welcome FIRST_NAME, you are logged in with the Instagram user: USERNAME"]
         let predicate = NSPredicate(format: "exists == 1")
         
-        self.expectationForPredicate(predicate, evaluatedWithObject: label, handler: nil)
-        self.waitForExpectationsWithTimeout(5, handler: nil)
+        self.expectation(for: predicate, evaluatedWith: label, handler: nil)
+        self.waitForExpectations(timeout: 5, handler: nil)
     }
 }
