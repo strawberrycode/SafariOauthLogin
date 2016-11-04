@@ -23,8 +23,8 @@ And add your redirect URI to `info.plist`
         </array>
     </dict>
 </array>
-``` `
-3. If you haven't got Cocoapods installed, check here to know what to do: https://guides.cocoapods.org/using/getting-started.html
+```
+3. If you haven't got Cocoapods installed, check here to know what to do: https://guides.cocoapods.org/using/getting-started.ht 
   then ```$ pod install```
 
 ###Note:###
@@ -32,7 +32,7 @@ And add your redirect URI to `info.plist`
 If you want the login to redirect to your app, then put the app scheme there. 
 
 ## Compatibility
-min: iOS 9 - Xcode 7 beta 4
+min: iOS 9 - Xcode 7 beta 4   
 
 ## More about this project
 
