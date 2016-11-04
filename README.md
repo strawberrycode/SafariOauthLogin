@@ -3,8 +3,8 @@ SFSafariViewController and OAuth: a simple login example with Instagram on iOS, 
 
 ## The 3-steps install
 
-1. Get your OAuth `client_id` and `client_secret` and your redirect url on https://instagram.com/developer/
-2. Add your keys and redirect URI to `Auth.swift`
+* Get your OAuth `client_id` and `client_secret` and your redirect url on https://instagram.com/developer/
+* Add your keys and redirect URI to `Auth.swift`
 ```
 let INSTAGRAM_CLIENT_ID = ""
 let INSTAGRAM_CLIENT_SECRET = ""
@@ -24,8 +24,9 @@ And add your redirect URI to `info.plist`
     </dict>
 </array>
 ```
+Use the app name set in your project, for example: `SafariOauthLogin`
 
-3. If you haven't got Cocoapods installed, check here to know what to do: https://guides.cocoapods.org/using/getting-started.ht 
+* If you haven't got Cocoapods installed, check here to know what to do: https://guides.cocoapods.org/using/getting-started.ht 
   then `$ pod install`
 
 ###Note:###
