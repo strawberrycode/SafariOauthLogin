@@ -24,8 +24,9 @@ And add your redirect URI to `info.plist`
     </dict>
 </array>
 ```
+
 3. If you haven't got Cocoapods installed, check here to know what to do: https://guides.cocoapods.org/using/getting-started.ht 
-  then ```$ pod install```
+  then `$ pod install`
 
 ###Note:###
 `INSTAGRAM_REDIRECT_URL` is one of the URIs you put in the field `Valid redirect URIs` in the Instagram Developer Portal when you create a new Client ID. It can be a website URL or an app scheme like `SafariOauthLogin://`. 
